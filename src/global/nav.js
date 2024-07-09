@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { CgProfile } from "react-icons/cg";
 
 function NavBar() {
   return (
@@ -22,7 +23,9 @@ function NavBar() {
                 </h3>
             </li>
         </ul>
-        
+        <ProfileContainer>
+            <CgProfile />
+        </ProfileContainer>
     </NavigationContainer>
   );
 }
@@ -63,5 +66,18 @@ const NavigationContainer = styled.div`
     a{
         color: #ffffff;
         text-decoration: none;
+    }
+        
+`;
+
+const ProfileContainer = styled.div`
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 100px;
+    svg {
+        height: 40px;
+        width: 40px;
+        color: #ffffff;
     }
 `;
